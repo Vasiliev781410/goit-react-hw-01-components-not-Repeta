@@ -8,6 +8,9 @@ import data from './statistic/data.json';
 import FriendList  from './friendList/FriendList.jsx';
 import friends from './friendList/friends.json';
 
+import TransactionHistory  from './transactionHistory/TransactionHistory.jsx';
+import transactions from './transactionHistory/transactions.json';
+
 function App() { 
   return (
     <>
@@ -17,10 +20,15 @@ function App() {
         location={user.location}
         avatar={user.avatar}
         stats={user.stats}/>
+      <p/>  
 
       <Statistics title="Upload stats" stats={data}/>
+      <p/>
 
       <FriendList friends={friends}/>
+      <p/>
+
+      <TransactionHistory items={transactions} />;
     </>
     );
 }
