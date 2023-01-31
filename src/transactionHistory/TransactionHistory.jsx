@@ -1,4 +1,5 @@
 import TransactionItem from "./TransactionItem.jsx";
+import PropTypes from 'prop-types';
 
 const TransactionHistory = ({items,}) =>(
     <table className="transaction-history">
@@ -16,5 +17,8 @@ const TransactionHistory = ({items,}) =>(
     </table>   
   );                     
 
+  TransactionHistory.propTypes = {
+    items: PropTypes.array,
+};
 export default TransactionHistory;
   

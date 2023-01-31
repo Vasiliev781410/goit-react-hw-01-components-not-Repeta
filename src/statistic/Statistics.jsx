@@ -1,4 +1,5 @@
 import Stat from "./Stat.jsx";
+import PropTypes from 'prop-types';
 
 const Statistics = ({title = null,stats,}) =>(
     <section className="statistics">
@@ -7,7 +8,12 @@ const Statistics = ({title = null,stats,}) =>(
             {stats.map(stat => (<Stat key={stat.id} elem={stat}/>))}
        </ul>
     </section>   
-  );                     
+  ); 
+  
+  Statistics.propTypes = {
+    title: PropTypes.string,
+    stats: PropTypes.array,
+};
 
 export default Statistics;
   
